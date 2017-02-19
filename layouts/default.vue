@@ -1,5 +1,5 @@
 <template>
-    <v-app id="example-3" class="grey lighten-1" top-toolbar left-sidebar>
+    <v-app class="grey lighten-1" top-toolbar left-sidebar>
     <v-toolbar>
         <v-toolbar-side-icon class="hidden-md-and-up" @click.native.stop="showSideBar = !showSideBar" />
         <v-toolbar-logo class="text-xs-right">{{pageHeader}}</v-toolbar-logo>
@@ -51,19 +51,19 @@ export default{
             showSideBar:false,
             pageHeader:"Dashii",
             itemGroup: [
-            { header: 'Header' },
+            { header: 'Main' },
             { title: 'Home', href:"/", action:"dashboard" },
             {
-                title: 'Parent',
+                title: 'Catalogs',
                 group: '/company',
                 items: [
-                { title: 'Child',href:'/about' },
-                { title: 'Child' },
-                { title: 'Child' }
+                { title: 'Catalog 1' },
+                { title: 'Catalog 2' },
+                { title: 'Catalog 3' }
                 ]
             },
-            { title: 'Link' },
-            { title: 'Link' },
+            { title: 'Forms' },
+            { title: 'Plugins' },
             { divider: true },
             { header: 'Another Header' },
             { title: 'About', href:"/about", action:"class" }

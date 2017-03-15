@@ -11,14 +11,13 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
-      { rel:'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons', type:'text/css'},
-      { rel:'stylesheet', href: 'https://unpkg.com/vuetify/dist/vuetify.min.css', type:'text/css'}
+      { rel:'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons', type:'text/css'}
     ]
   },
   /*
   ** Global CSS
   */
-  css: ['~assets/css/main.css'],
+  css: ['~assets/css/main.css','vuetify/dist/vuetify.min.css'],
   /*
   ** Customize the progress-bar color
   */
@@ -26,5 +25,9 @@ module.exports = {
   /**
    * plugins
    */
-  plugins: ['~plugins/vuetify']
+  plugins: ['~plugins/vuetify'],
+
+  build: {
+        vendor: ['vuetify']
+    }
 }

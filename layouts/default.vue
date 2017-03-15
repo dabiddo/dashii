@@ -57,7 +57,7 @@ export default{
                 title: 'Catalogs',
                 group: '/company',
                 items: [
-                { title: 'Catalog 1' },
+                { title: 'Catalog 1', href:"/cards" },
                 { title: 'Catalog 2' },
                 { title: 'Catalog 3' }
                 ]

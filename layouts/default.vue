@@ -5,7 +5,7 @@
         <v-toolbar-logo class="text-xs-right">{{pageHeader}}</v-toolbar-logo>
     </v-toolbar>
     <main>
-        <v-sidebar height="auto">
+        <v-sidebar v-model="showSideBar" height="auto">
         <v-list dense>
             <template v-for="item in itemGroup">
             <v-list-group v-if="item.items">

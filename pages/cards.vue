@@ -38,7 +38,7 @@
 </template>
 <script>
 export default{
-    data({req}){
+    asyncData({req}){
         return {
             card_text:"dadadkbkuhkjhahlhflakshf"
         }

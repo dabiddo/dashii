@@ -12,7 +12,7 @@
 </template>
 <script>
 export default{
-    data(){
+    asyncData(){
         return {
             products:[
                 {title:"tacos"},{title:"sodas"}

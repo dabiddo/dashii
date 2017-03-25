@@ -16,9 +16,3 @@
   margin: 50px 0;
 }
 </style>
-<script>
-  export default {
-  
-}
-</script>
-

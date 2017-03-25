@@ -17,14 +17,14 @@
                     </v-list-tile-action>
                 </v-list-tile>
                 </v-list-item>
-                <v-list-item v-for="subItem in item.items">
+                <v-list-item v-for="subItem in item.items" :key="subItem.title">
                 <nuxt-link v-if="subItem.title" :to="{path :subItem.href}" v-bind:class="{list__tile:subItem.title}">
                             <div v-if="subItem.title" class="list__tile__content"><div class="list__tile__title">{{subItem.title}}</div></div>
                             <div v-if="subItem.title" class="list__tile__action"><i class="material-icons icon">{{subItem.action}}</i></div>
                 </nuxt-link>
                 </v-list-item>
             </v-list-group>
-            <v-list-sub-header v-else-if="item.header" v-text="item.header" />
+            <!--<v-list-sub-header v-else-if="item.header" v-text="item.header" />-->
             <v-divider v-else-if="item.divider" light />
             <v-list-item v-else>
                 <nuxt-link v-if="item.title" :to="{path :item.href}" v-bind:class="{list__tile:item.title}">
@@ -63,7 +63,7 @@ export default{
                 ]
             },
             { title: 'Forms' },
-            { title: 'Plugins' },
+            { title: 'Plugins', href:"/products" },
             { divider: true },
             { header: 'Another Header' },
             { title: 'About', href:"/about", action:"class" }
